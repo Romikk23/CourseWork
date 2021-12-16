@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="019aa16d-dce2-4db9-9635-a4f324f79108" />
+          <option name="name" value="music" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/music.db" />
+              <option value="file://$PROJECT_DIR$/table_name.sql" />
+            </array>
+          </option>
+          <option name="scriptOptions">
+            <map>
+              <entry key="QualifyWithSchema" value="ALWAYS" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

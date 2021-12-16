@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.MainController">
+   <children>
+      <AnchorPane prefHeight="81.0" prefWidth="350.0" style="-fx-background-color: #7a7a7a; -fx-background-radius: 10;">
+         <children>
+            <ImageView fx:id="create" fitHeight="46.0" fitWidth="69.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-apple-music-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="duration" fitHeight="46.0" fitWidth="69.0" layoutX="77.0" layoutY="10.0" onDragDetected="#handleButtonAction" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-время-музыки-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="sort" fitHeight="46.0" fitWidth="69.0" layoutX="144.0" layoutY="10.0" onDragDetected="#handleButtonAction" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-передняя-сортировка-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="file" fitHeight="46.0" fitWidth="69.0" layoutX="215.0" layoutY="10.0" onDragDetected="#handleButtonAction" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-база-данных-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="exit" fitHeight="46.0" fitWidth="69.0" layoutX="288.0" layoutY="10.0" onDragDetected="#handleButtonAction" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-imac-выход-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="diskMenu" layoutY="104.0" prefHeight="298.0" prefWidth="350.0" style="-fx-background-color: #7a7a7a; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Label fx:id="label" layoutX="106.0" layoutY="14.0" text="Disk manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.59" />
+               </effect>
+            </Label>
+            <ImageView fx:id="add" fitHeight="46.0" fitWidth="46.0" layoutX="13.0" layoutY="42.0" onMouseClicked="#handleDiskMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-записать-cd-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="delete" fitHeight="46.0" fitWidth="46.0" layoutX="13.0" layoutY="126.0" onMouseClicked="#handleDiskMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-очистить-корзину-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <JFXListView fx:id="listDisk" fixedCellSize="30.0" layoutX="103.0" layoutY="54.0" onMouseClicked="#handleDiskMenuAction" prefHeight="232.0" prefWidth="229.0" visible="false" />
+            <JFXListView fx:id="listAll" fixedCellSize="30.0" layoutX="103.0" layoutY="54.0" onMouseClicked="#handleDiskMenuAction" prefHeight="232.0" prefWidth="229.0" style="-fx-background-color: #7a7a7a;" visible="false" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="durMenu" layoutY="104.0" prefHeight="298.0" prefWidth="350.0" style="-fx-background-color: #7a7a7a; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Label fx:id="label1" layoutX="103.0" layoutY="14.0" text="Choose duration" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.59" />
+               </effect>
+            </Label>
+            <ImageView fx:id="from" fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="72.0" onMouseClicked="#handleDurMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-стрелка-влево-в-круге-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="to" fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="149.0" onMouseClicked="#handleDurMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-стрелка-вправо-в-круге-2-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <JFXListView fx:id="listDiskDur" fixedCellSize="30.0" layoutX="81.0" layoutY="81.0" onMouseClicked="#handleDurMenuAction" prefHeight="136.0" prefWidth="255.0" style="-fx-background-color: #7a7a7a;" />
+            <ImageView fx:id="find" fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="229.0" onMouseClicked="#handleDurMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-ок-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <JFXTextArea fx:id="fromText" focusColor="#1e1e1e" labelFloat="true" layoutX="86.0" layoutY="55.0" prefHeight="18.0" prefWidth="73.0" style="-fx-border-color: #454545; -fx-background-color: #7a7a7a;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXTextArea>
+            <JFXTextArea fx:id="toText" focusColor="#141414" labelFloat="true" layoutX="86.0" layoutY="136.0" prefHeight="42.0" prefWidth="73.0" style="-fx-border-color: #454545; -fx-background-color: #7a7a7a;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXTextArea>
+         </children></AnchorPane>
+      <AnchorPane fx:id="sortMenu" layoutY="104.0" prefHeight="298.0" prefWidth="350.0" style="-fx-background-color: #7a7a7a; -fx-background-radius: 10;" visible="false">
+         <children>
+            <ImageView fx:id="commit" fitHeight="46.0" fitWidth="46.0" layoutX="50.0" layoutY="183.0" onMouseClicked="#handleSortMenuAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-ок-100.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection fraction="0.4" topOpacity="0.14" />
+               </effect>
+            </ImageView>
+            <Label fx:id="labelSort" layoutX="157.0" layoutY="14.0" text="Sort" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.59" />
+               </effect>
+            </Label>
+            <JFXTextArea fx:id="genre" focusColor="#1e1e1e" labelFloat="true" layoutX="36.0" layoutY="92.0" prefHeight="18.0" prefWidth="73.0" style="-fx-border-color: #454545; -fx-background-color: #7a7a7a;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextArea>
+            <JFXListView fx:id="listSort" fixedCellSize="30.0" layoutX="18.0" layoutY="41.0" onMouseClicked="#handleSortMenuAction" prefHeight="232.0" prefWidth="296.0" style="-fx-background-color: #7a7a7a;" visible="false" />
+            <Label fx:id="labelSort1" layoutX="25.0" layoutY="65.0" text="Type genre" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.59" />
+               </effect>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="fileMenu" layoutY="104.0" prefHeight="298.0" prefWidth="350.0" visible="false">
+         <children>
+            <Label fx:id="db" layoutX="56.0" prefHeight="40.0" prefWidth="239.0" text="Disk has been saved">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="0.42" />
+               </effect></Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="exitMenu" layoutX="-6.0" layoutY="114.0" prefHeight="298.0" prefWidth="366.0" visible="false">
+         <children>
+            <Label fx:id="bye" layoutX="129.0" prefHeight="63.0" prefWidth="108.0" text="Goodbye" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="0.42" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
